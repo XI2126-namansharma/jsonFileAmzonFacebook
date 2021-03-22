@@ -1,0 +1,74 @@
+data of user - POST if success response code 201
+
+{ 
+	"firstName":"Naman",
+	"surName":"Sharma",
+	"MobileNumber":"7037977778",
+	"emailId":"naman@gmail.com",
+	"password":"12580",
+	"dateOfBirth":"18/05/2021",
+	"gender":"Male"
+}
+
+POST : http://localhost:8080/facebook/user
+
+getting the data of 1 user - GET if success response code 200
+
+{
+	"userId":123,
+	"firstName":"Naman",
+	"surName":"Sharma",
+	"MobileNumber":"7037977778",
+	"emailId":"naman@gmail.com",
+	"password":"12580",
+	"dateOfBirth":"18/05/2021",
+	"gender":"Male"
+}
+
+GET: http://localhost:8080/facebook/user/{userId}
+
+getting the data of all users - GET if success response code 200
+
+[ 
+	{
+		"userId":123,
+		"firstName":"Naman",
+		"surName":"Sharma",
+		"MobileNumber":"7037977778",
+		"emailId":"naman@gmail.com",
+		"password":"12580",
+		"dateOfBirth":"18/05/2021",
+		"gender":"Male"
+	},
+	{
+		"userId":124,
+		"firstName":"Naman",
+		"surName":"Sharma",
+		"MobileNumber":"7037977778",
+		"emailId":"naman@gmail.com",
+		"password":"12580",
+		"dateOfBirth":"18/05/2021",
+		"gender":"Male"
+	}
+]
+
+GET: http://localhost:8080/facebook/user
+
+updating the user data - PUT if success responce code 202
+
+{
+	"userId":123,
+	"firstName":"Naman",
+	"surName":"Sharma",
+	"MobileNumber":"8307777209",
+	"emailId":"naman@gmail.com",
+	"password":"12580",
+	"dateOfBirth":"18/05/2021",
+	"gender":"Male"
+}
+
+PUT: http://localhost:8080/facebook/user/{userId}
+
+deleting the user data - DELETE if success responce code 202
+
+DELETE: http://localhost:8080/facebook/user/{userId}

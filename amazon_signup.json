@@ -1,0 +1,68 @@
+data of user - POST if success response code 201
+
+{
+	"username":"naman.sharma",
+	"securityQuestion":"what is your pet's name",
+	"yourAnswer":"Cherry",
+	"firstName":"Naman",
+	"lastName":"Sharma",
+	"gender":"Male",
+	"meritalStatus":"Not Married",
+	"dateOfBirth":"18/05/2000"
+	"occupation":"Job",
+	"emailId":"naman@gmail.com",
+	"MobileNo":7037977778,
+	"nationality":"Indian"
+}
+POST : http://localhost:8080/irctc/user
+
+getting the data of 1 user - GET if success response code 200
+
+{
+	"userId":123,
+	"username":"naman.sharma",
+	"name":"Naman Sharma",
+	"gender":"Male",
+	"emailId":"naman@gmail.com",
+	"MobileNo":7037977778
+}
+GET: http://localhost:8080/irctc/user/{userId}
+
+getting the data of all users - GET if success response code 200
+
+[
+	{
+		"userId":123,
+		"username":"naman.sharma",
+		"name":"Naman Sharma",
+		"gender":"Male",
+		"emailId":"naman@gmail.com",
+		"MobileNo":7037977778
+	},
+	{
+		"userId":124,
+		"username":"naman.sharma",
+		"name":"Naman Sharma",
+		"gender":"Male",
+		"emailId":"naman@gmail.com",
+		"MobileNo":7037977778
+	}
+]
+GET: http://localhost:8080/irctc/user
+
+updating the user data - PUT if success responce code 202
+
+{
+	"userId":123,
+	"username":"naman.sharma",
+	"name":"Naman Sharma",
+	"gender":"Male",
+	"emailId":"naman@gmail.com",
+	"MobileNo":8307777209
+}
+
+PUT: http://localhost:8080/irctc/user/{userId}
+
+deleting the user data - DELETE if success responce code 202
+
+DELETE: http://localhost:8080/irctc/user/{userId}
